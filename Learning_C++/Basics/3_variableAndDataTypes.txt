@@ -1,0 +1,79 @@
+| **Category**             | **Description**            | **Examples**                                |
+| ------------------------ | -------------------------- | ------------------------------------------- |
+| **1. Basic / Primitive** | Fundamental built-in types | `int`, `float`, `char`, `double`, `bool`    |
+| **2. Derived**           | Derived from basic types   | `array`, `pointer`, `function`, `reference` |
+| **3. User-defined**      | Created by programmers     | `struct`, `class`, `union`, `enum`          |
+
+
+| **Data Type** | **Meaning**                        | **Size (approx.)** | **Example**                            |
+| ------------- | ---------------------------------- | ------------------ | -------------------------------------- |
+| `int`         | Integer numbers (no decimal)       | 4 bytes            | `int age = 20;`                        |
+| `float`       | Decimal numbers (single precision) | 4 bytes            | `float pi = 3.14;`                     |
+| `double`      | Decimal numbers (double precision) | 8 bytes            | `double g = 9.81;`                     |
+| `char`        | Single character                   | 1 byte             | `char grade = 'A';`                    |
+| `bool`        | Boolean value (`true`/`false`)     | 1 byte             | `bool passed = true;`                  |
+| `void`        | No value / empty                   | 0 bytes            | Used for functions that return nothing |
+
+
+| **Type**      | **Description**                   | **Example**             |
+| ------------- | --------------------------------- | ----------------------- |
+| **Array**     | Collection of same data type      | `int marks[5];`         |
+| **Pointer**   | Stores memory address             | `int *ptr;`             |
+| **Function**  | A block of code returning a value | `int sum(int a, int b)` |
+| **Reference** | Alias name for a variable         | `int &ref = a;`         |
+
+
+| **Type**                 | **Description**                        | **Example**                                |
+| ------------------------ | -------------------------------------- | ------------------------------------------ |
+| **Structure (`struct`)** | Group of different data types          | `struct Student { int id; string name; };` |
+| **Class (`class`)**      | Like a struct but with OOP features    | `class Car { ... };`                       |
+| **Union (`union`)**      | Shares memory for all members          | `union Data { int i; float f; };`          |
+| **Enum (`enum`)**        | Defines set of named integer constants | `enum Day {Sun, Mon, Tue};`                |
+
+
+| **Modifier** | **Used With** | **Example**           |
+| ------------ | ------------- | --------------------- |
+| `short`      | int           | `short int x;`        |
+| `long`       | int, double   | `long double pi;`     |
+| `signed`     | int, char     | `signed char c;`      |
+| `unsigned`   | int, char     | `unsigned int count;` |
+
+
+| **Category**                | **Data Type**            | **Size (Bytes)** | **Typical Range**                                       | **Example**                              |
+| --------------------------- | ------------------------ | ---------------- | ------------------------------------------------------- | ---------------------------------------- |
+| 🔢 **Integer Types**        | `short int`              | 2                | –32,768 to 32,767                                       | `short int a = 100;`                     |
+|                             | `unsigned short int`     | 2                | 0 to 65,535                                             | `unsigned short int b = 50000;`          |
+|                             | `int`                    | 4                | –2,147,483,648 to 2,147,483,647                         | `int age = 20;`                          |
+|                             | `unsigned int`           | 4                | 0 to 4,294,967,295                                      | `unsigned int id = 40000;`               |
+|                             | `long int`               | 4 or 8           | –2,147,483,648 to 2,147,483,647 (or larger)             | `long int distance = 100000;`            |
+|                             | `unsigned long int`      | 4 or 8           | 0 to 4,294,967,295 (or larger)                          | `unsigned long int x = 999999;`          |
+|                             | `long long int`          | 8                | –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | `long long big = 12345678900;`           |
+|                             | `unsigned long long int` | 8                | 0 to 18,446,744,073,709,551,615                         | `unsigned long long ubig = 98765432100;` |
+| 🧮 **Floating Point Types** | `float`                  | 4                | ~±3.4 × 10⁻³⁸ to ±3.4 × 10³⁸                            | `float pi = 3.14;`                       |
+|                             | `double`                 | 8                | ~±1.7 × 10⁻³⁰⁸ to ±1.7 × 10³⁰⁸                          | `double g = 9.81;`                       |
+|                             | `long double`            | 12 or 16         | Very large range (system dependent)                     | `long double val = 123.456789;`          |
+| 🔠 **Character Types**      | `char`                   | 1                | –128 to 127 (ASCII)                                     | `char grade = 'A';`                      |
+|                             | `unsigned char`          | 1                | 0 to 255                                                | `unsigned char c = 250;`                 |
+| ⚙️ **Boolean Type**         | `bool`                   | 1                | `true` or `false`                                       | `bool isPass = true;`                    |
+| 🧵 **String Type**          | `string`                 | Varies           | Sequence of characters                                  | `string name = "Rahat";`                 |
+| 🚫 **Void Type**            | `void`                   | 0                | No value                                                | Used in functions like `void main()`     |
+
+
+| **Modifier** | **Used with**   | **Purpose**                                                  |
+| ------------ | --------------- | ------------------------------------------------------------ |
+| `signed`     | `int`, `char`   | Allows both **positive and negative** values (default)       |
+| `unsigned`   | `int`, `char`   | Allows **only positive** values (doubles the positive range) |
+| `short`      | `int`           | Reduces memory size (smaller range)                          |
+| `long`       | `int`, `double` | Increases memory size (larger range)                         |
+
+
+| **Modifier Combination** | **Bytes** | **Typical Range**               |
+| ------------------------ | --------- | ------------------------------- |
+| `short int`              | 2         | –32,768 to 32,767               |
+| `unsigned short int`     | 2         | 0 to 65,535                     |
+| `int`                    | 4         | –2,147,483,648 to 2,147,483,647 |
+| `unsigned int`           | 4         | 0 to 4,294,967,295              |
+| `long int`               | 4 or 8    | Very large range                |
+| `unsigned long int`      | 4 or 8    | Positive large range            |
+| `long long int`          | 8         | –9e18 to +9e18                  |
+| `unsigned long long int` | 8         | 0 to 18e18                      |
